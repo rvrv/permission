@@ -43,14 +43,14 @@ module.exports = function(roles){
       } else if (noPermissionRedirect != null) {
         res.redirect(noPermissionRedirect);
       } else {
-        res.status(401).send(null);
+        res.status(403).send(null);
       }
     }
     else if (noPermissionRedirect != null) {
       res.redirect(noPermissionRedirect);
     }
     else {
-      res.status(401).send(null);
+      res.status(403).send(null);
     }
   }
 }
